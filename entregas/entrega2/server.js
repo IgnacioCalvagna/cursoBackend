@@ -20,10 +20,14 @@ class Contenedor {
 
   async getById(id) {
 
-    const productos = await this.getAll();
-     const producto =  productos.find(product => product.id === id);
-   console.log(JSON.stringify(producto, null, 2))
-   ;
+    try{
+      const productos = await this.getAll();
+       const producto =  productos.find(product => product.id === id);
+     console.log(JSON.stringify(producto, null, 2));
+
+    }catch (e) {
+      console.log(e)
+    }
   }
   async getAll() {
     try {
@@ -43,8 +47,12 @@ class Contenedor {
     }
   }
   async deleteAll (){
-    const productos = []
-    await fs.writeFile(this.ruta, JSON.stringify(productos))
+    try{
+      const productos = []
+      await fs.writeFile(this.ruta, JSON.stringify(productos))
+    }catch (e) {
+      console.log(e)
+    }
   }
 }
 
