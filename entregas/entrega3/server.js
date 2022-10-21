@@ -3,8 +3,8 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const morgan = require("morgan");
 
-const productosController = require("../entrega2/server");
-const productos = require("../entrega2/products.json");
+const productosController = require("./Contenedor");
+const productos = require("./products.json");
 
 app.use(morgan("dev"));
 
