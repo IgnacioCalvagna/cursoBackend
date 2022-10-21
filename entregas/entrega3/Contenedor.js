@@ -18,10 +18,20 @@ class Contenedor {
     }
   }
 
+  async getRandom() {
+    const productos = await this.getAll();
+
+    const numRandom = Math.floor(
+      Math.random(productos.length + 1) * productos.length + 1
+    );
+
+    return numRandom;
+  }
+
   async getById(id) {
     try {
       const productos = await this.getAll();
-      const producto =  productos.find((product) => product.id === id);
+      const producto = productos.find((product) => product.id === id);
       return JSON.stringify(producto);
     } catch (e) {
       console.log(e);
@@ -55,5 +65,4 @@ class Contenedor {
     }
   }
 }
-module.exports = Contenedor
-
+module.exports = Contenedor;
