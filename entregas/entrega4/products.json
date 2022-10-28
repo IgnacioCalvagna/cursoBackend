@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "title": "Iphone 14 ProMax",
+    "price": 2500,
+    "quentity": 10,
+    "img": null
+  },
+  {
+    "id": 2,
+    "title": "Iphone XR",
+    "price": 800,
+    "quentity": 60,
+    "img": null
+  },
+  {
+    "id": 3,
+    "title": "Iphone 12",
+    "price": 1200,
+    "quentity": 30,
+    "img": ""
+  },
+  {
+    "id": 4
+  },
+  {
+    "id": 5
+  },
+  {
+    "id": 6
+  },
+  {
+    "id": 7
+  },
+  {
+    "id": 8
+  },
+  {
+    "id": 9
+  }
+]
