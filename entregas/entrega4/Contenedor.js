@@ -12,12 +12,11 @@ class Contenedor {
       id = productos.length + 1;
       productos.push({ id, ...object });
       await fs.writeFile(this.ruta, JSON.stringify(productos, null, 2));
-      return id;
+      return object;
     } catch (e) {
       console.log(e);
     }
   }
-
   async getRandom() {
     const productos = await this.getAll();
     const numRandom = Math.floor(
@@ -25,13 +24,12 @@ class Contenedor {
     );
     return numRandom;
   }
-
   async getById(id) {
     try {
       const productos = await this.getAll();
       const producto = productos.find((product) => product.id == id);
-      const miProd = JSON.stringify(producto, null, 2);
-      return miProd;
+      const miProd = JSON.stringify(producto);
+      return JSON.parse(miProd);
     } catch (e) {
       console.log(e);
     }
@@ -44,9 +42,7 @@ class Contenedor {
       return [];
     }
   }
-
   async update(id, title, price, quentity, img) {
-
     const productos = await this.getAll();
     const producto = productos.find((product) => product.id == id);
 
@@ -55,11 +51,10 @@ class Contenedor {
     producto.quentity = quentity;
     producto.img = img;
 
-    console.log(producto)
+    console.log(producto);
     await fs.writeFile(this.ruta, JSON.stringify(productos, null, 2));
     return producto;
   }
-
   async deleteById(id) {
     try {
       const productos = await this.getAll();

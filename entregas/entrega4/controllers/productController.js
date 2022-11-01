@@ -20,7 +20,7 @@ exports.getById=async (req, res, next) => {
       const findProduct = await Producto.getById(id);
       findProduct
         ? res.json({ success: true, error: false, findProduct })
-        : res.json({ success: false, error: "Producto no encontrado" });
+        : res.status(400).json({ success: false, error: "Producto no encontrado" });
     } catch (e) {
       next(e);
     }
@@ -30,7 +30,7 @@ exports.getById=async (req, res, next) => {
     const { body } = req;
     const newProduct = await Producto.save(body);
     console.log(newProduct);
-    res.json( newProduct );
+    res.json( {newProduct} );
   }
 
   exports.edit=  async (req, res, next) => {
