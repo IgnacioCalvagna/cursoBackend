@@ -42,7 +42,7 @@ h1 {
   /* padding: 8%; */
   margin: 0 auto;
   display: flex;
-  background-color: #374b14;
+  background-color: #bad4e5;
 }
 
 .productForm {
@@ -58,12 +58,7 @@ h1 {
   display: flex;
 }
 
-.card {
-  width: 100%;
-  border-radius: 30px solid;
-  /* padding: 8px 5px; */
-  margin: 10%;
-}
+
 
 .laImg{
   width: 10vw;

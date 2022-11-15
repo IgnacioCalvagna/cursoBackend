@@ -37,12 +37,15 @@ socket.on("products", (data) => {
   let html2 = "";
   data.forEach((obj) => {
     html2 += `
-    <div class="card">
-      <img class="laImg"src='${obj.data.img}' alt="">
-      Product:  ${obj.data.product} <br/>
-      Price $${obj.data.price}<br/>
-      Quantity: ${obj.data.quantity}
-    </div>
+    <tr >
+     
+   
+      <td>${obj.data.product} </td>
+      <td>${obj.data.price}</td>
+      <td>${obj.data.quantity}</td>
+      <td> <img class="laImg"src='${obj.data.img}' alt="${obj.data.product}"></td>
+
+    </tr>
     `;
   });
   document.getElementById("product-box").innerHTML = html2;
