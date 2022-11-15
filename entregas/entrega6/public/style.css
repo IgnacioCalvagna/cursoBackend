@@ -1,0 +1,74 @@
+h1 {
+  color: blue;
+}
+
+
+
+.chat {
+  display: flex;
+  /* margin-bottom:25%; */
+  text-align: center;
+  margin: 0 auto;
+  width: "100%";
+
+  /* background-color:beige; */
+
+}
+
+.chatForm {
+  width: 50%;
+  float: left;
+  padding: 8% 8%;
+  background-color: rgb(202, 194, 181);
+  margin: 0 auto;
+}
+
+
+
+
+.msj-box {
+  width: 50%;
+  vertical-align: bottom;
+  padding: 5%;
+  margin: 0 auto;
+  background-color: #e0e9d0;
+
+
+}
+
+/* PRODUCTOSSS  */
+.product-box {
+  width: 100%;
+  /* padding: 8%; */
+  margin: 0 auto;
+  display: flex;
+  background-color: #374b14;
+}
+
+.productForm {
+  width: 100%;
+  padding: 8% 8%;
+  background-color: rgb(231, 210, 183);
+  margin: 0 auto;
+}
+.products {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  border-radius: 30px solid;
+  /* padding: 8px 5px; */
+  margin: 10%;
+}
+
+.laImg{
+  width: 10vw;
+  height: 10vh;
+}
+
+
+
