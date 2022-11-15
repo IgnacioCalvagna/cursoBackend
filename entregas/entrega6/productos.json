@@ -12,10 +12,10 @@
   {
     "id": 2,
     "data": {
-      "product": "Iphone 300",
-      "price": "50000000",
+      "product": "Iphone xs",
+      "price": "500",
       "quantity": "1",
-      "img": ""
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNB8IauqXXZX7r10PIzLUHAl3ZduITye22gw&usqp=CAU"
     },
     "fecha": "2022-11-15T00:18:26.352Z"
   },
