@@ -14,7 +14,6 @@ exports.addCart = async (req, res, next) => {
       res.json({success:false, error:err.message,puto:"el que lee"})
   }
 };
-
 exports.getAll = async (req, res, next) => {
   try {
     const carritos = await Carrito.getAll();
@@ -28,7 +27,6 @@ exports.getById=async (req, res, next)=>{
     const miCarrito = await Carrito.getById(id)
     res.json({success:true, miCarrito})
 }
-
 exports.addProductToCart= async (req, res, next) => {
     const {id} = req.params
     const productId = req.body.id

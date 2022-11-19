@@ -91,7 +91,6 @@ class Contenedor {
     console.log(cEncontrado);
     
   }
-
   async cleanCart(id){
     const carritos = await this.getAll();
     const cEncontrado = carritos.find(carrito=>carrito.id == id);
