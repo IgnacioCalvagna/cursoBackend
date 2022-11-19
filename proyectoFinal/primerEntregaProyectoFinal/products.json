@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Iphone 13",
+    "price": 1200,
+    "quentity": 30,
+    "img": ""
+  },
+  {
+    "id": 2,
+    "title": "Iphone 14",
+    "price": 1500,
+    "quentity": 15,
+    "img": ""
+  },
+  {
+    "id": 3,
+    "title": "Iphone xs",
+    "price": 900,
+    "quentity": 150,
+    "img": ""
+  },
+  {
+    "id": 4,
+    "title": "Iphone xr",
+    "price": 850,
+    "quentity": 150,
+    "img": ""
+  }
+]
