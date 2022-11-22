@@ -1,8 +1,11 @@
 
 
 
-<h1>Proyecto Final </h1>
-    <h2>Coder House - Desarrollo Backend</h2>
+## Proyecto Final 
+Coder House - Desarrollo Backend - curso 43495
+
+Alumno : Ignacio Calvagna 
+    
 
 # Testear con Swagger 
 http://localhost:8080/api-doc
