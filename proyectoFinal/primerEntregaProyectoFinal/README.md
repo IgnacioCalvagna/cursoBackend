@@ -24,17 +24,35 @@ http://localhost:8080/api-doc
       <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
       <td>Devuelve todos los productos</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Get</td>
-      <td>http://localhost:8080/api/products/:id</td>
-      <td>Devuelve un producto por su Id</td>
+   <tr>
+      <th scope="row">1</th>
+      <td style="color:green">Get</td>
+      <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
+      <td>Devuelve todos los productos</td>
     </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <tr>
+      <th scope="row">1</th>
+      <td style="color:green">Get</td>
+      <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
+      <td>Devuelve todos los productos</td>
+    </tr>
+      <tr>
+      <th scope="row">1</th>
+      <td style="color:green">Get</td>
+      <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
+      <td>Devuelve todos los productos</td>
+    </tr>
+      <tr>
+      <th scope="row">1</th>
+      <td style="color:green">Get</td>
+      <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
+      <td>Devuelve todos los productos</td>
+    </tr>
+      <tr>
+      <th scope="row">1</th>
+      <td style="color:green">Get</td>
+      <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
+      <td>Devuelve todos los productos</td>
     </tr>
   </tbody>
 </table>
