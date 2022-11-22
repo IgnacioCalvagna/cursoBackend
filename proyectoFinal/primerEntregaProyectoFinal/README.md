@@ -28,34 +28,33 @@ http://localhost:8080/api-doc
    <tr>
       <th scope="row">2</th>
       <td style="color:green">Get</td>
-      <td><a href="http://localhost:8080/api/products/3" target="_blank"/>Get products by id</td>
+      <td><a href="http://localhost:8080/api/products/3" target="_blank"/>Get product by id</td>
       <td>Devuelve un producto segun el id</td>
     </tr>
       <tr>
       <th scope="row">3</th>
       <td style="color:green">Post</td>
-      <td><a href="http://localhost:8080/api/products" target="_blank"/>Add products</td>
-      <td>Devuelve todos los productos</td>
+      <td><a href="http://localhost:8080/api/products" target="_blank"/>Add product</td>
+      <td>Devuelve todos los productos <strong>testear en Postman</strong> </td>
     </tr>
       <tr>
       <th scope="row">4</th>
       <td style="color:green">Put</td>
-      <td><a href=href="http://localhost:8080/api/products/3" target="_blank"/>Edit products</td>
+      <td><a href="http://localhost:8080/api/products/3" target="_blank"/>Edit product</td>
           <td>Edita un producto segun su id, <strong>testear en Postman</strong> </td>
     </tr>
       <tr>
       <th scope="row">5</th>
       <td style="color:green">Delete</td>
-      <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
-      <td>Devuelve todos los productos</td>
+      <td><a href="http://localhost:8080/api/products/:id" target="_blank"/>Remove product</td>
+      <td>Elimina un producto por id <strong>testear en Postman</strong>  </td>
   </tbody>
 </table>
 
 
 
 
-3) addProducts ==POST==> http://localhost:8080/api/products
-4) editProducts ==PUT==> http://localhost:8080/api/products
+
 5) deleteProductById ==DELETE==> http://localhost:8080/api/products/:id
 
 ## Rutas de CARRITO 
