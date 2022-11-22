@@ -4,7 +4,8 @@
 <h1>Proyecto Final </h1>
     <h2>Coder House - Desarrollo Backend</h2>
 
-
+# Testear con Swagger 
+http://localhost:8080/api-doc
 
 
 ## Rutas de PRODUCTOS 
