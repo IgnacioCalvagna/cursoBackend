@@ -7,6 +7,7 @@
 # Testear con Swagger 
 http://localhost:8080/api-doc
 
+## Rutas de PRODUCTOS 
 <table class="table">
   <thead>
     <tr>
@@ -33,34 +34,26 @@ http://localhost:8080/api-doc
       <tr>
       <th scope="row">3</th>
       <td style="color:green">Post</td>
-      <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
+      <td><a href="http://localhost:8080/api/products" target="_blank"/>Add products</td>
       <td>Devuelve todos los productos</td>
     </tr>
       <tr>
       <th scope="row">4</th>
       <td style="color:green">Put</td>
-      <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
-      <td>Devuelve todos los productos</td>
+      <td><a href=href="http://localhost:8080/api/products/3" target="_blank"/>Edit products</td>
+          <td>Edita un producto segun su id, <strong>testear en Postman</strong> </td>
     </tr>
       <tr>
       <th scope="row">5</th>
       <td style="color:green">Delete</td>
       <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
       <td>Devuelve todos los productos</td>
-    </tr>
-      <tr>
-      <th scope="row">1</th>
-      <td style="color:green">Get</td>
-      <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
-      <td>Devuelve todos los productos</td>
-    </tr>
   </tbody>
 </table>
 
-## Rutas de PRODUCTOS 
 
 
-2) getProductById ==GET==> http://localhost:8080/api/products/3
+
 3) addProducts ==POST==> http://localhost:8080/api/products
 4) editProducts ==PUT==> http://localhost:8080/api/products
 5) deleteProductById ==DELETE==> http://localhost:8080/api/products/:id
