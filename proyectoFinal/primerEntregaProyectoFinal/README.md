@@ -108,11 +108,3 @@ Alumno : Ignacio Calvagna
      </tr>
   </tbody>
 </table>
-
-
-
-
-/*
-# Testear con Swagger 
-http://localhost:8080/api-doc
-*/
