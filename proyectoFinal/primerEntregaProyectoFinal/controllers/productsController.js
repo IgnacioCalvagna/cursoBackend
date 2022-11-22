@@ -6,6 +6,9 @@ const adminErrorMsj= "No posees las credenciales para realizar esta operación"
 const validarAdmin = ()=>{
   return admin
 }
+
+
+
 exports.getAll = async (req, res, next) => {
   try {
     const productos = await Producto.getAll();
