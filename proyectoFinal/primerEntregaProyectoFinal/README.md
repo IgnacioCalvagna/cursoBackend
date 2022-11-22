@@ -20,7 +20,7 @@ http://localhost:8080/api-doc
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Get</td>
+      <td style="color:green">Get</td>
       <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
       <td>Devuelve todos los productos</td>
     </tr>
