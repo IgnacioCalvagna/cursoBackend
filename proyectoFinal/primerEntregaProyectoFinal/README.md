@@ -11,23 +11,24 @@ http://localhost:8080/api-doc
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">VERBO</th>
+      <th scope="col">Verb</th>
       <th scope="col">path</th>
+      <th scope="col">Action</th>
 
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>GET</td>
+      <td>Get</td>
       <td>http://localhost:8080/api/products</td>
-     
+      <td>Devuelve todos los productos</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Get</td>
+      <td>http://localhost:8080/api/products/:id</td>
+      <td>Devuelve un producto por su Id</td>
     </tr>
     <tr>
       <th scope="row">3</th>
