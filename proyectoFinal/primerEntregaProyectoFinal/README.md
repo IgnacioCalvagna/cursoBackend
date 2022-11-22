@@ -15,8 +15,7 @@ http://localhost:8080/api-doc
       <th scope="col">Verb</th>
       <th scope="col">path</th>
       <th scope="col">Action</th>
-
-    </tr>dasfas
+    </tr>
   </thead>
   <tbody>
     <tr>
