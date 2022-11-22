@@ -25,26 +25,26 @@ http://localhost:8080/api-doc
       <td>Devuelve todos los productos</td>
     </tr>
    <tr>
-      <th scope="row">1</th>
+      <th scope="row">2</th>
       <td style="color:green">Get</td>
+      <td><a href="http://localhost:8080/api/products/3" target="_blank"/>Get products by id</td>
+      <td>Devuelve un producto segun el id</td>
+    </tr>
+      <tr>
+      <th scope="row">3</th>
+      <td style="color:green">Post</td>
       <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
       <td>Devuelve todos los productos</td>
     </tr>
       <tr>
-      <th scope="row">1</th>
-      <td style="color:green">Get</td>
+      <th scope="row">4</th>
+      <td style="color:green">Put</td>
       <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
       <td>Devuelve todos los productos</td>
     </tr>
       <tr>
-      <th scope="row">1</th>
-      <td style="color:green">Get</td>
-      <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
-      <td>Devuelve todos los productos</td>
-    </tr>
-      <tr>
-      <th scope="row">1</th>
-      <td style="color:green">Get</td>
+      <th scope="row">5</th>
+      <td style="color:green">Delete</td>
       <td><a href="http://localhost:8080/api/products" target="_blank"/>Get products</td>
       <td>Devuelve todos los productos</td>
     </tr>
@@ -59,8 +59,8 @@ http://localhost:8080/api-doc
 
 ## Rutas de PRODUCTOS 
 
-1) getAllProducts ==GET==> http://localhost:8080/api/products
-2) getProductById ==GET==> http://localhost:8080/api/products/:id
+
+2) getProductById ==GET==> http://localhost:8080/api/products/3
 3) addProducts ==POST==> http://localhost:8080/api/products
 4) editProducts ==PUT==> http://localhost:8080/api/products
 5) deleteProductById ==DELETE==> http://localhost:8080/api/products/:id
