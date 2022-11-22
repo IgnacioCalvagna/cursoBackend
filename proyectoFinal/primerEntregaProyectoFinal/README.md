@@ -7,8 +7,7 @@ Coder House - Desarrollo Backend - curso 43495
 Alumno : Ignacio Calvagna 
     
 
-# Testear con Swagger 
-http://localhost:8080/api-doc
+
 
 ## Rutas de PRODUCTOS 
 <table class="table">
@@ -80,37 +79,39 @@ http://localhost:8080/api-doc
     <tr>
       <th scope="row">3</th>
       <td style="color:green">Get</td>
-      <td><a href="http://localhost:8080/api/carts/:id/products" target="_blank"/>Get product from cart</td>
-      <td>Agrega a un carrito especifico un producto </td>
+      <td><a href="http://localhost:8080/api/carts/1/products" target="_blank"/>Get product from cart</td>
+      <td>Devuelve los productos de un carrito </td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td style="color:green">Post</td>
-      <td><a href="http://localhost:8080/api/carts/" target="_blank"/>Add product in cart</td>
-      <td>Agreg un producto segun su id, <strong>testear en Postman</strong> </td>
+      <td><a href="http://localhost:8080/api/carts/" target="_blank"/></td>
+      <td>Agreg un producto segun su id, <strong>testear en Postman</strong>Crea un carrito</td>
     </tr>
     <tr>
       <th scope="row">5</th>
-      <td style="color:green">Delete</td>
-      <td><a href="http://localhost:8080/api/products/:id" target="_blank"/>Remove product</td>
-      <td>Elimina un producto por id <strong>testear en Postman</strong>  </td>
+      <td style="color:green">Post</td>
+      <td><a href="http://localhost:8080/api/carts/1/products" target="_blank"/>Add product in cart</td>
+      <td>Agrega a un carrito especifico un producto <strong>testear en Postman</strong>  </td>
      </tr>
       <tr>
-      <th scope="row">5</th>
+      <th scope="row">6</th>
       <td style="color:green">Delete</td>
-      <td><a href="http://localhost:8080/api/products/:id" target="_blank"/>Remove product</td>
-      <td>Elimina un producto por id <strong>testear en Postman</strong>  </td>
+      <td><a href="http://localhost:8080/api/carts/:id" target="_blank"/>Clean cart</td>
+      <td>Vacia un carrito segun su id</td>
      </tr>
        <tr>
-      <th scope="row">5</th>
+      <th scope="row">7</th>
       <td style="color:green">Delete</td>
-      <td><a href="http://localhost:8080/api/products/:id" target="_blank"/>Remove product</td>
-      <td>Elimina un producto por id <strong>testear en Postman</strong>  </td>
+      <td><a href="http://localhost:8080/api/carts/2/products/1" target="_blank"/>Remove product from cart</td>
+      <td>Elimina de un carrito  un producto por id  <strong>testear en Postman</strong>  </td>
      </tr>
   </tbody>
 </table>
 
-4) createCart ==POST==> http://localhost:8080/api/carts/
-5) addProductToCart ==POST==> http://localhost:8080/api/carts/1/products
-6) cleanCart ==DELETE==> http://localhost:8080/api/carts/:id
-7) removeProductFromCart ==DELETE==> http://localhost:8080/api/carts/:id_cart/products/:id_prod
+
+
+
+
+# Testear con Swagger 
+http://localhost:8080/api-doc
