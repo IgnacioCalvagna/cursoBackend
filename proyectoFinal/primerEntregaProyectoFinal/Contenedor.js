@@ -5,7 +5,7 @@ class Contenedor {
   constructor(ruta) {
     this.ruta = ruta;
   }
-  //*  Metodos para productos 
+  //*  Metodos para productos
   async save(object) {
     let productos = await this.getAll();
     try {
@@ -73,43 +73,47 @@ class Contenedor {
     }
   }
 
-  //*  Metodos para el carrito  
-  async addProductToCart(id, productToADD){
+  //*  Metodos para el carrito
+  async addProductToCart(id, productToADD) {
     const carritos = await this.getAll();
-    
-    
-    const cEncontrado =  carritos.find(c=> c.id == id)
-    try{
+    const cEncontrado = carritos.find((c) => c.id == id);
 
-      cEncontrado.products.push(productToADD)
+    try {
+      cEncontrado.products.push(productToADD);
       await fs.writeFile(this.ruta, JSON.stringify(carritos, null, 2));
-      
-    }catch(err){
-      console.log(err.message)
-
-    }
-    console.log(cEncontrado);
-    
-  }
-  async cleanCart(id){
-    const carritos = await this.getAll();
-    const cEncontrado = carritos.find(carrito=>carrito.id == id);
-    try{
-      cEncontrado.products=[]
-      await fs.writeFile(this.ruta, JSON.stringify(carritos, null, 2));
-    }catch(err){
+    } catch (err) {
       console.log(err.message);
     }
   }
-  async deleteProductFromCart(id, productToRemove){
+
+  async viewProductInCart(id) {
+    const carts = await this.getAll();
+    const cEncontrado = carts.find((c) => c.id == id);
+
+    return cEncontrado.products;
+  }
+
+  async cleanCart(id) {
     const carritos = await this.getAll();
-    const cEncontrado = carritos.find(carrito=>carrito.id == id);
-    try{
-      cEncontrado.products = cEncontrado.products.filter(prod=>prod.id != productToRemove)
+    const cEncontrado = carritos.find((carrito) => carrito.id == id);
+    try {
+      cEncontrado.products = [];
       await fs.writeFile(this.ruta, JSON.stringify(carritos, null, 2));
-    } catch(e){
-      console.log(e.message)
+    } catch (err) {
+      console.log(err.message);
     }
+  }
+  async deleteProductFromCart(id, productToRemove) {
+    const carritos = await this.getAll();
+    const cEncontrado = carritos.find((carrito) => carrito.id == id);
+    try {
+      cEncontrado.products = cEncontrado.products.filter(
+        (prod) => prod.id != productToRemove
+      );
+      await fs.writeFile(this.ruta, JSON.stringify(carritos, null, 2));
+    } catch (e) {
+      console.log(e.message);
     }
+  }
 }
 module.exports = Contenedor;

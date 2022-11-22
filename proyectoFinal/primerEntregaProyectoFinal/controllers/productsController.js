@@ -1,6 +1,11 @@
 const Contenedor = require("../Contenedor");
 const Producto = new Contenedor("./products.json");
+const admin = true
+const adminErrorMsj= "No posees las credenciales para realizar esta operación"
 
+const validarAdmin = ()=>{
+  return admin
+}
 exports.getAll = async (req, res, next) => {
   try {
     const productos = await Producto.getAll();
@@ -26,10 +31,11 @@ exports.getById = async (req, res, next) => {
     next(e);
   }
 };
+
 exports.addProduct = async (req, res, next) => {
   const { body } = req;
-  console.log(body);
-
+  if(!admin) res.json({ success: false, error: adminErrorMsj})
+  body.timestamp = Date.now() 
   const newProduct = await Producto.save(body);
   console.log({ miBody: newProduct });
   res.json({ newProduct });
@@ -38,8 +44,8 @@ exports.edit = async (req, res, next) => {
   const { id } = req.params;
   const { title, price, quentity, img } = req.body;
   try {
+    // if(!admin) res.json({ success: false, error: adminErrorMsj})
     await Producto.update(id, title, price, quentity, img);
-
     res.json({ success: true, error: false });
   } catch (e) {
     res.json({ success: false, error: e.message });
@@ -49,8 +55,8 @@ exports.edit = async (req, res, next) => {
 exports.deleteById = async (req, res, next) => {
   const { id } = req.params;
   try {
+    if(!admin) res.json({ success: false, error: adminErrorMsj})
     await Producto.deleteById(id);
-
     res.json({ success: true });
   } catch (e) {
     next(e);

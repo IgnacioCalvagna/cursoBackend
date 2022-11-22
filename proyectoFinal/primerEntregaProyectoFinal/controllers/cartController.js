@@ -2,6 +2,9 @@ const Contenedor = require("../Contenedor");
 const Carrito = new Contenedor("./carts.json");
 const Producto = new Contenedor("./products.json");
 
+
+
+
 exports.addCart = async (req, res, next) => {
   const newCart={
       products:[],
@@ -27,12 +30,19 @@ exports.getById=async (req, res, next)=>{
     const miCarrito = await Carrito.getById(id)
     res.json({success:true, miCarrito})
 }
+exports.getProductFromCart= async (req, res, next) => {
+    const {id} = req.params
+    try {
+        const products= await Carrito.viewProductInCart(id)
+        res.json({success:true, products})
+    }catch(err){
+        res.json({success:false, error:err.message})
+    }
+}
 exports.addProductToCart= async (req, res, next) => {
     const {id} = req.params
     const productId = req.body.id
     const productoToAdd = await Producto.getById(productId)
-    productoToAdd.timestamp=Date.now()
-    
     const elCarri = await Carrito.addProductToCart(id,productoToAdd)
 
     res.json(elCarri)
@@ -45,7 +55,6 @@ exports.cleanCart=async(req, res, next) => {
     }catch(err) {
         res.json(err)
     }
-
 }
 exports.removeProductFromCart= async (req, res, next)=>{
     const {id,id_prod} = req.params

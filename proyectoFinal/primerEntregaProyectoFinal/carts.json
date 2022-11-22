@@ -1,29 +1,35 @@
 [
   {
     "id": 1,
-    "products": [],
-    "timestamp": 1668873868441
-  },
-  {
-    "id": 2,
     "products": [
       {
-        "id": 2,
-        "title": "Iphone 14",
-        "price": 1500,
-        "quentity": 15,
+        "id": 1,
+        "title": "Iphone 13 Pro Max",
+        "price": 1350,
+        "codigo": "IPH13PM",
+        "stock": 30,
         "img": "",
-        "timestamp": 1668878723815
+        "timestamp": 1669069347963
       },
       {
         "id": 4,
-        "title": "Iphone xr",
+        "title": "Iphone XS ",
         "price": 850,
-        "quentity": 150,
+        "codigo": "IPHXS",
+        "stock": 150,
         "img": "",
-        "timestamp": 1668878730565
+        "timestamp": 1669069520490
+      },
+      {
+        "id": 2,
+        "title": "Iphone 13 Pro ",
+        "price": 1250,
+        "codigo": "IPH13P",
+        "stock": 50,
+        "img": "",
+        "timestamp": 1669069481372
       }
     ],
-    "timestamp": 1668875360641
+    "timestamp": 1669051966690
   }
 ]
