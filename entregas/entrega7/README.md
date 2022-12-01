@@ -3,8 +3,12 @@
 
 ## Proyecto Final 
 Coder House - Desarrollo Backend - curso 43495
+<br/>
 Alumno : Ignacio Calvagna 
+<br/>
 Desafio Nro 7 
+<br/>
+mysql - sqlite3 
     
 ## Instrucciones de uso 
 
