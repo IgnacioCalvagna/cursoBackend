@@ -1,0 +1,27 @@
+{
+  "name": "entrega7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "seedProducts":" node utils/productTable",
+    "seedChat":" node utils/msjTable"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "knex": "^0.21.0",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.5.4",
+    "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
