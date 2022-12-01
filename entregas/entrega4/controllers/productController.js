@@ -13,7 +13,6 @@ exports.getAll = async (req, res, next) => {
       next(e);
     }
   };
-  
 exports.getById=async (req, res, next) => {
     try {
       const { id } = req.params;
@@ -26,12 +25,18 @@ exports.getById=async (req, res, next) => {
     }
   }
 
+  
   exports.addProduct=async (req, res, next) => {
     const { body } = req;
+    console.log(body)
+
     const newProduct = await Producto.save(body);
-    console.log(newProduct);
+    console.log({"miBody":newProduct});
     res.json( {newProduct} );
   }
+
+
+
 
   exports.edit=  async (req, res, next) => {
     const { id } = req.params;
@@ -45,8 +50,6 @@ exports.getById=async (req, res, next) => {
       next(e);
     }
   }
-
-
   exports.deleteById =  async (req, res, next) => {
     const { id } = req.params;
     try {
@@ -57,3 +60,5 @@ exports.getById=async (req, res, next) => {
       next(e);
     }
   }
+
+  

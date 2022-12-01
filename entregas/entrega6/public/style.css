@@ -67,3 +67,26 @@ h1 {
 
 
 
+@media (max-width: 900px) {
+
+  .chat{
+    display:block;
+  }
+  .chatForm{
+    width: 100%;  
+  }
+ .msj-box{
+  width: 100%;
+ }
+ 
+ 
+  .products{
+    display: block;
+  }
+  .productForm {
+    width: 100%;
+  }
+  .product-box {
+    width: 100%;
+  }
+}

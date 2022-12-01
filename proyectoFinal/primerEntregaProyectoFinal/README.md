@@ -1,3 +1,6 @@
+
+
+
 ## Proyecto Final 
 Coder House - Desarrollo Backend - curso 43495
 
@@ -82,8 +85,8 @@ Alumno : Ignacio Calvagna
     <tr>
       <th scope="row">4</th>
       <td style="color:green">Post</td>
-      <td><a href="http://localhost:8080/api/carts/" target="_blank"/></td>
-      <td>Agreg un producto segun su id, <strong>testear en Postman</strong>Crea un carrito</td>
+      <td><a href="http://localhost:8080/api/carts/" target="_blank"/>Create cart </td>
+      <td>Agrega un carrito <strong>testear en Postman</strong>Crea un carrito</td>
     </tr>
     <tr>
       <th scope="row">5</th>
@@ -104,4 +107,5 @@ Alumno : Ignacio Calvagna
       <td>Elimina de un carrito  un producto por id  <strong>testear en Postman</strong>  </td>
      </tr>
   </tbody>
+  ...
 </table>

@@ -20,11 +20,7 @@ class Contenedor {
 
   async getRandom() {
     const productos = await this.getAll();
-
-    const numRandom = Math.floor(
-      Math.random(productos.length + 1) * productos.length + 1
-    );
-
+    const numRandom = Math.floor(Math.random(productos.length + 1) * productos.length + 1);
     return numRandom;
   }
 

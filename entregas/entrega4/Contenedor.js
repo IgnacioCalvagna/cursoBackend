@@ -1,11 +1,11 @@
 const { promises: fs } = require("fs");
-
 let id;
 
 class Contenedor {
   constructor(ruta) {
     this.ruta = ruta;
   }
+  //*  Metodos para productos 
   async save(object) {
     const productos = await this.getAll();
     try {
@@ -42,6 +42,11 @@ class Contenedor {
       return [];
     }
   }
+
+
+
+
+  
   async update(id, title, price, quentity, img) {
     const productos = await this.getAll();
     const producto = productos.find((product) => product.id == id);
@@ -55,6 +60,12 @@ class Contenedor {
     await fs.writeFile(this.ruta, JSON.stringify(productos, null, 2));
     return producto;
   }
+
+
+
+
+
+
   async deleteById(id) {
     try {
       const productos = await this.getAll();
@@ -72,5 +83,11 @@ class Contenedor {
       console.log(e);
     }
   }
+
+
+  //*  Metodos para el carrito  
+
+
+
 }
 module.exports = Contenedor;

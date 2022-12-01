@@ -16,7 +16,7 @@ socket.on("mensajes", (data) => {
   let html = "";
   data.forEach((obj) => {
     html += `
-    <div >
+    <div  data-spy="scroll" data-target="#navbar-example2" data-offset="0">
     
       <p class="parrafo" style="border-radius: 3px solid red;">
         <b class="email" style="color:blue">${obj.data.user}</b>:
@@ -31,15 +31,18 @@ socket.on("mensajes", (data) => {
   document.getElementById("msj-box").innerHTML = html;
 });
 
+
+
+
+
 //*                                       PRODUCTOSSS
 socket.on("products", (data) => {
-  console.log("products", data);
   let html2 = "";
   data.forEach((obj) => {
     html2 += `
     <tr >
      
-   
+      <td>${obj.id} </td>
       <td>${obj.data.product} </td>
       <td>${obj.data.price}</td>
       <td>${obj.data.quantity}</td>
@@ -54,6 +57,10 @@ socket.on("products", (data) => {
 socket.on("product", (data) => {
   socket.emit("product", data);
 });
+
+
+
+
 
 function addProduct() {
   const product = document.getElementById("send-product");
