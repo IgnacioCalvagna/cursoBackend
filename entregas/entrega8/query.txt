@@ -1,0 +1,77 @@
+1) Creamos la base de datos → use e-commerce
+
+2) Creamos la coleccion mensajes e insertamos datos → db.mensajes.insert( [ 
+
+{email: “ignaciocalvagna@gmail.com” , mensaje: “prueba msj”},
+
+{email: “alguien@mail.com” , mensaje : “prueba 2 ”} 
+
+{email: “alguien@mail.com” , mensaje : “prueba 3 ”} 
+
+{email: “alguien@mail.com” , mensaje : “prueba 4 ”} 
+
+{email: “alguien@mail.com” , mensaje : “prueba 5 ”} 
+
+{email: “alguien@mail.com” , mensaje : “prueba 6 ”} 
+
+{email: “alguien@mail.com” , mensaje : “prueba 7 ”} 
+
+{email: “alguien@mail.com” , mensaje : “prueba 8 ”} 
+
+{email: “alguien@mail.com” , mensaje : “prueba 9 ”} 
+
+{email: “alguien@mail.com” , mensaje : “prueba 10 ”} 
+
+] )
+
+Creamos la coleccion de productos e insertamos datos → db.productos.insert([
+
+{nombre:"Iphone 7 plus",codigo:"ipho13pm",precio:120,stock:30}
+
+{nombre:"Iphone 7",codigo:"ipho07",precio:580,stock:100},
+
+{nombre:"Iphone 8",codigo:"ipho8",precio:900,sotck:70},
+
+{nombre:"Iphone X",codigo:"ipho13pm",precio:4320,stock:30}
+
+{nombre:"Iphone XR",codigo:"iphoXR",precio:1280,stock:90},
+
+{nombre:"Iphone XS",codigo:"ipho13pm",precio:3350,stock:30}
+
+{nombre:"Iphone 11",codigo:"ipho11",precio:1700,stock:40},
+
+{nombre:"Iphone 12",codigo:"ipho12",precio:2300,stock:70},
+
+{nombre:"Iphone 13 ",codigo:"ipho13pm",precio:2860,stock:30}
+
+{nombre:"Iphone 14",codigo:"ipho13pm",precio:4990,stock:30}
+
+])
+
+3) mostramos las colecciones → db.productos.find()
+
+                                                    db.mensajes.find()
+
+4)mostramos la cantidad de productos de cada coleccion → db.mensajes.countDocuments()
+
+                                                                                                   db.productos.countDocuments()
+
+5)  A) agregar un producto a la coleccion → db.productos.insert({nombre:”Iphone 11 pro max”,codigo:”ipho11PM”,precio:850,stock:33})
+
+B)   
+
+I)Listar los productos con precio menor a 1000→  db.productos.find({"price":{$lt:1000}})
+
+ II)consultar productos entra rango de precios entre 1000 y 3000 → db.productos.find({price :{$gte:1000, $lte:3000 }})
+
+III) Listar los productos con precio mayor a 3000→ db.productos.find({price :{$gt: 3000 }}) 
+
+IV)Consultar por el 3er producto mas barato → db.productos.find().sort({price :1}).skip(2).limit(1)
+
+C)Modificamos el stock de todos los productos → db.productos.updateMany({},{$set:{"stock":100}})
+
+D)Modificamos stock de algunos productos → db.productos.updateMany({price : {$gt:4000}},{$set:{stock:0}})
+
+E) Borramos los productos precio menor a → db.productos.deleteMany({precio:{$lt:1000}})
+
+6) Creamos usuarios pepe → db.createUser({user:’lector’,pwd:’123456’, roles:[{role:’read’,db:’e-commerce}]})
