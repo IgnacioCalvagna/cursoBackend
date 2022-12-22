@@ -1,0 +1,64 @@
+[
+  {
+    "id": 1,
+    "products": [
+      {
+        "id": 1,
+        "title": "Iphone 13 Pro Max",
+        "price": 1350,
+        "codigo": "IPH13PM",
+        "stock": 30,
+        "img": "",
+        "timestamp": 1669069347963
+      },
+      {
+        "id": 4,
+        "title": "Iphone XS ",
+        "price": 850,
+        "codigo": "IPHXS",
+        "stock": 150,
+        "img": "",
+        "timestamp": 1669069520490
+      },
+      {
+        "id": 2,
+        "title": "Iphone 13 Pro ",
+        "price": 1250,
+        "codigo": "IPH13P",
+        "stock": 50,
+        "img": "",
+        "timestamp": 1669069481372
+      }
+    ],
+    "timestamp": 1669051966690
+  },
+  {
+    "id": 2,
+    "products": [
+      {
+        "id": 3,
+        "title": "Iphone 15",
+        "price": 1200,
+        "quentity": 30,
+        "img": "",
+        "timestamp": 1671744450633
+      }
+    ],
+    "timestamp": 1671743747995
+  },
+  {
+    "id": 3,
+    "products": [],
+    "timestamp": 1671743969739
+  },
+  {
+    "id": 4,
+    "products": [],
+    "timestamp": 1671743971389
+  },
+  {
+    "id": 5,
+    "products": [],
+    "timestamp": 1671743972314
+  }
+]

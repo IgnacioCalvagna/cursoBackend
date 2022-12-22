@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Iphone 13 Pro Max",
+    "price": 1350,
+    "codigo": "IPH13PM",
+    "stock": 30,
+    "img": "",
+    "timestamp": 1669069347963
+  },
+  {
+    "id": 2,
+    "title": "Iphone 1dasdas4",
+    "price": 1200,
+    "quentity": 30,
+    "img": "",
+    "timestamp": 1671744445410
+  },
+  {
+    "id": 3,
+    "title": "Iphone 15",
+    "price": 1200,
+    "quentity": 30,
+    "img": "",
+    "timestamp": 1671744450633
+  }
+]
