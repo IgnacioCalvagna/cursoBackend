@@ -1,0 +1,235 @@
+openapi: 3.0.1
+info:
+  title: Primer entrega proyecto final  - Coder House - Backend 
+  description: API desarrollada por Ignacio Calvagna para el curso de backend de Coder House. 
+    <br></br>
+    <b>Alumno:</b>
+    <i>Ignacio Calvagna</i>
+   
+    
+  contact:
+    email: ignaciocalvagna@gmail.com
+  license:
+    name: Proyecto e-commerce 
+    url: http://localhost:8080/api
+  version: 1.0.0
+servers:
+- url:  http://localhost:8080/
+
+tags:
+- name: Products
+  description: Rutas de productos 
+- name: Cart 
+  description: Rutas de carrito
+- name: User
+  description: Rutas para los usuarios (A futuro )
+  
+paths:
+  
+  /api/products:
+    get:
+      tags:
+
+      - Products
+      summary: Devuelve todos los productos almacenados 
+
+      description: Obtiene todos los productos almacenados.
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: "#/components/schemas/Products"
+        
+          
+    post:
+      tags:
+      - Products
+      summary: Agrega un producto
+      description:  Agrega un producto a la base de datos (Actualmente usando FS )
+      requestBody: 
+        required: true
+        content: 
+          aplication/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/Products"
+            
+      responses:
+        200:
+          description: OK new product added
+          content: {}
+          
+  /products/{id}:
+    get:
+      tags:
+      - Products
+      summary: Obtiene un producto por su id
+      description: Usuario se loguea con correo electrónico y token.
+      parameters:
+      - name: id
+        in: path
+        description: id del producto
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: OK
+          content: {}
+    put:
+      tags:
+      - Products
+      summary: Usuario se registra con datos y email
+      description: Usuario se registra con nombre, apellido y correo electrónico.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        201:
+          description: OK
+          content: {}
+    delete:
+      tags:
+      - Products
+      summary: Usuario se registra con datos y email
+      description: Usuario se registra con nombre, apellido y correo electrónico.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        201:
+          description: OK
+          content: {}        
+  
+  
+  /cart/:
+    get:
+      tags:
+      - Cart
+      summary: Usuario logueado
+      description: Usuario con sesión iniciada.
+      responses:
+        200:
+          description: OK
+          content: {}
+    post:
+      tags:
+      - Cart
+      summary: Crea un carrito y devuelve su id
+      description: Se obtiene el token.
+      responses:
+        200:
+          description: OK
+          content: {}
+  /cart/{id}:
+    delete:
+      tags:
+      - Cart
+      summary: Vacia un carrito y lo elimina 
+      description: Creación de rol de usuario con niveles 1, 2 y 3(user, admin y superadmin)
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: OK
+          content: {}
+  /cart/{id}/products:
+    get:
+      tags:
+      - Cart
+      summary: Devuelve los productos de un carrito. 
+      description: Se le pasa un id por req.params y busca el carrito y sus productos .
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: OK
+          content: {
+            
+            
+          }
+
+        404: 
+          description: not found
+    post:
+      tags:
+      - Cart
+      summary: Crea un carrito y devuelve su id
+      description: Se obtiene el token.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: OK
+          content: {}
+       
+components:
+  schemas:
+    Products:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        title:
+          type: string
+          format: int64
+        description:
+          type: string
+          format: int64
+        codigo:
+          type: string
+          format: int64
+        pictureURL:
+          type: string
+        price:
+          type: integer
+        stock:
+          type: integer
+      example:
+        title: Iphone 13
+        price: 1250
+        codigo: IP13
+        stock: 50
+        img: 
+        timestamp: "1669069481372"
+    Cart:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        timestamp:
+          type: string
+          format: date-time
+        products:
+          type: array
+          items:
+            $ref: "#/components/schemas/Products"
+      example:
+        id: 1
+        timestamp: "1669069481372"
+        products: [$ref: "#/components/schemas/Products"]
+       
