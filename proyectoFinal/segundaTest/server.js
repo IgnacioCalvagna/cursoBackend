@@ -1,8 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8080;
 const morgan = require("morgan");
 const router = require("./routes");
+
 
 //Swagger
 const swaggerUI = require("swagger-ui-express");

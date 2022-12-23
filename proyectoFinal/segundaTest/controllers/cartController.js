@@ -8,7 +8,7 @@ const Carrito = instancia.CartDao
 const Producto = instancia.ProuctDao
 
 
-console.log(instancia.ProuctDao.ruta,"dfjasjfa")
+console.log(instancia.ProuctDao,"dfjasjfa")
 
 exports.addCart = async (req, res, next) => {
   const newCart={
