@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entrega Nro 6 Socket.io Calvagna </title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+  <section class="chat">
+    <hr>
+    <div class="chatForm">
+
+      <form action="" onsubmit="enviarMensaje()"; return false>
+        <h2>Chat con socket.io</h2>
+
+        <div class="mb-3">
+          <input type="text" class="form-control" id="send-user" placeholder="User" required>
+        </div>
+        <div class="mb-3">
+
+          <input type="text" class="form-control" id="send-msj" placeholder="Message " required>
+        </div>
+        <button class="btn btn-success" type="submit">Enviar </button>
+      </form>
+
+    </div>
+    <div class="msj-box">
+      <div id="msj-box">
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="productForm">
+      <form action="" onsubmit="addProduct()"; return false>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Product</label>
+          <input type="text" class="form-control" id="send-product">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Price</label>
+          <input type="number" class="form-control" id="send-price">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Quantity</label>
+          <input type="number" class="form-control" id="send-quantity">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Picture URL </label>
+          <input type="text" class="form-control" id="send-img">
+        </div>
+        <button type="submit" class="btn btn-warning">Agregar producto</button>
+      </form>
+    </div>
+
+    <div class="product-box" >
+      <div style="width: 100%">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Picture URL</th>
+            </tr>
+          </thead>
+          <tbody id="product-box">
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+  "></script>
+  <script src="/index.js"></script>
+</body>
+
+</html>
