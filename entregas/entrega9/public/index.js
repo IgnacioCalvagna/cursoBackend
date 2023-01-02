@@ -1,5 +1,9 @@
 const socket = io();
 
+
+
+
+
 socket.on("connect", () => {
   console.log(`New user ${socket.id} BROWSER `);
   //*  con esta linea mando mensajes desde el front
@@ -37,21 +41,24 @@ socket.on("mensajes", (data) => {
 
 //*                                       PRODUCTOSSS
 socket.on("products", (data) => {
+
   let html2 = "";
+  console.log("hola mundo ")
+  console.log(data)
+  let id = 1
   data.forEach((obj) => {
     html2 += `
     <tr >
-     
       <td>${obj.id} </td>
-      <td>${obj.data.product} </td>
-      <td>${obj.data.price}</td>
-      <td>${obj.data.quantity}</td>
-      <td> <img class="laImg"src='${obj.data.img}' alt="${obj.data.product}"></td>
-
+      <td>${obj.title} </td>
+      <td>${obj.price} </td>
+      
+      <td> <img class="laImg"src='${obj.thumbnail}' alt="${obj.title}"></td>
     </tr>
     `;
   });
   document.getElementById("product-box").innerHTML = html2;
+  
 });
 
 socket.on("product", (data) => {
